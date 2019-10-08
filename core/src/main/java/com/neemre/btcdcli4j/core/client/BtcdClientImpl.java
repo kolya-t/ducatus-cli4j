@@ -225,6 +225,13 @@ public class BtcdClientImpl implements BtcdClient {
 	}
 
 	@Override
+	public List<String> generate(Integer numblocks) throws BitcoindException, CommunicationException {
+		String generatedBlocksJson = rpcClient.execute(Commands.GENERATE.getName(), numblocks);
+		List<String> generatedBlocks = rpcClient.getMapper().mapToList(generatedBlocksJson, String.class);
+		return generatedBlocks;
+	}
+
+	@Override
 	public String getAccount(String address) throws BitcoindException, CommunicationException {
 		String accountJson = rpcClient.execute(Commands.GET_ACCOUNT.getName(), address);
 		String account = rpcClient.getParser().parseString(accountJson);

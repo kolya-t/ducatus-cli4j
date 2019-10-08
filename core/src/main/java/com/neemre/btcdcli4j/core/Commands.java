@@ -23,6 +23,7 @@ public enum Commands {
 	ENCRYPT_WALLET("encryptwallet", 1, 1),
 	ESTIMATE_FEE("estimatefee", 1, 1),
 	ESTIMATE_PRIORITY("estimatepriority", 1, 1),
+	GENERATE("generate", 1, 1),
 	GET_ACCOUNT("getaccount", 1, 1),
 	GET_ACCOUNT_ADDRESS("getaccountaddress", 1, 1),
 	GET_ADDED_NODE_INFO("getaddednodeinfo", 1, 2),

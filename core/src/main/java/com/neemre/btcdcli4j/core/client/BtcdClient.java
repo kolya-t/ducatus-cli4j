@@ -68,6 +68,8 @@ public interface BtcdClient {
 
 	BigDecimal estimatePriority(Integer maxBlocks) throws BitcoindException, CommunicationException;
 
+	List<String> generate(Integer numblocks) throws BitcoindException, CommunicationException;
+
 	String getAccount(String address) throws BitcoindException, CommunicationException;
 
 	String getAccountAddress(String account) throws BitcoindException, CommunicationException;
